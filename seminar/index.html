@@ -279,6 +279,14 @@ footer{padding:28px 0 110px;background:var(--blue);color:rgba(255,255,255,.85);f
   .ol-h{margin-top:96px}
   .sp-strip{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
+
+/* v5: на телефоні відео стоїть над текстом, людей видно повністю */
+@media(max-width:899px){
+  .hv{height:54svh}
+  .hv video{object-position:50% 68%}
+  .hv::after{background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 62%,rgba(0,0,0,.75) 86%,#000 100%)}
+  .hero .date{text-shadow:none}
+}
 </style>
 </head>
 <body>
