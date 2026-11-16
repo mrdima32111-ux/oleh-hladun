@@ -1787,6 +1787,31 @@ main > section.flow.flat{border-radius:0!important;margin-top:0!important}
 
 .btn-blk{background:#0e0f14;color:var(--white);border-color:rgba(255,255,255,.28)}
 @media(hover:hover){.btn-blk:hover{border-color:var(--white)}}
+
+/* ================= v62: аудит верстки ================= */
+@media(max-width:899px){
+  .fbody .trk1 .viz,.fbody .trk1 .viz > *{min-width:0;max-width:100%}
+  .fbody .trk1 > li{min-width:0}
+  .tiles{gap:6px}
+  .tiles div{padding:14px 4px;font-size:12.5px;min-width:0}
+  .tiles svg{width:34px;height:34px}
+}
+@media(max-width:380px){
+  .fbody .kpi{gap:6px}
+  .fbody .kpi span,.fbody .kpi b,.fbody .kpi div{font-size:12px;min-width:0}
+}
+.event .date{margin-left:0;max-width:100%}
+@media(min-width:600px){.event .date{font-size:clamp(110px,24vw,300px)}}
+
+@media(max-width:380px){
+  .kpi > div{grid-template-columns:auto minmax(0,1fr) 26px;gap:8px;padding-inline:10px}
+  .kpi span{font-size:12.5px}
+  .tiles div{font-size:11px}
+  .tiles svg{width:28px;height:28px}
+}
+@media(min-width:900px){.hero .cta-row .btn-line{padding-inline:30px}}
+
+@media(min-width:900px) and (max-width:1279px){:root{--gut:max(36px,env(safe-area-inset-left,0px));--gut-r:max(36px,env(safe-area-inset-right,0px))}}
 </style>
 </head>
 <body>
