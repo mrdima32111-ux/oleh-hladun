@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Офлайн бізнес-семінар для підприємців у Празі 29 листопада 2026.">
+<title>Офлайн бізнес-семінар у Празі · 29 листопада</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;600&display=swap">
+<style>
+:root{
+  --black:#000;--white:#fff;--blue:#1447ff;--blue-hi:#5d83ff;--soft:#f1f3f8;--navy:#0a1750;
+  --dim:rgba(255,255,255,.66);--ink-dim:rgba(0,0,0,.6);
+  --display:'Unbounded',system-ui,sans-serif;--body:'Onest',system-ui,sans-serif;
+  --gut:max(20px,env(safe-area-inset-left,0px));--gut-r:max(20px,env(safe-area-inset-right,0px));--max:1200px;
+  --shade:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(6,16,64,.42) 48%,rgba(0,0,0,.92) 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip;max-width:100%}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+ul,ol{list-style:none}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut) var(--gut-r)}
+.sec{position:relative;padding-block:clamp(84px,11vw,150px);background:var(--black)}
+.sec + .sec,.hero + .sec{border-radius:36px 36px 0 0;margin-top:-36px}
+.light{background:var(--white);color:var(--black)}
+.soft{background:var(--soft);color:var(--black)}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;line-height:1.05}
+.mega{font-weight:800;font-size:clamp(40px,11.4vw,120px);line-height:.92;letter-spacing:-.035em;text-transform:uppercase}
+.mega em{display:block;font-style:normal;color:var(--blue-hi)}
+.light .mega em,.soft .mega em{color:var(--blue)}
+.sub{margin-top:22px;max-width:30em;font-size:clamp(17px,1.5vw,21px);color:var(--dim)}
+.light .sub,.soft .sub{color:var(--black);font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:var(--body);font-weight:600;font-size:16px;border-radius:99px;padding:17px 26px;border:1.5px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn-blue{background:var(--blue);color:var(--white)}
+.btn-white{background:var(--white);color:var(--black)}
+.arr{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--white);color:var(--blue);font-size:14px}
+.btn-white .arr{background:var(--blue);color:var(--white)}
+/* відео-картка з текстом поверх */
+.vc{position:relative;overflow:hidden;border-radius:26px;background:var(--navy);isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end}
+.vc > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.vc::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--shade)}
+.vc-in{padding:24px 22px}
+
+/* ---------- перший екран ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate;padding-bottom:36px}
+.hv{position:absolute;left:0;right:0;top:0;height:60svh;z-index:-2}
+.hv video{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.hv::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 50%,rgba(6,18,76,.6) 76%,#000 100%)}
+.orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(90px);background:var(--blue);opacity:.38;pointer-events:none}
+.orb.a{width:76vw;height:76vw;left:-36vw;bottom:10%}
+.orb.b{width:60vw;height:60vw;right:-30vw;bottom:-14%;opacity:.26}
+.top{position:absolute;left:0;right:0;top:0;padding-top:max(16px,env(safe-area-inset-top,0px))}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:99px;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.24);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);font-weight:600;font-size:14px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--blue-hi);box-shadow:0 0 0 4px rgba(93,131,255,.28)}
+.hero-in{padding-bottom:20px}
+.dline{display:flex;align-items:flex-end;gap:12px}
+.date{font-family:var(--display);font-weight:800;font-size:clamp(100px,30vw,230px);line-height:.8;letter-spacing:-.05em;margin-left:-.03em;text-shadow:0 10px 60px rgba(0,0,0,.6)}
+.dline span{padding-bottom:.5em;font-family:var(--display);font-weight:600;font-size:15px;color:var(--blue-hi);white-space:nowrap}
+.hero h1{margin-top:20px;font-weight:800;font-size:clamp(33px,9.6vw,76px);line-height:.96;letter-spacing:-.03em;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--blue-hi)}
+.hero .lead{margin-top:16px;max-width:31em;font-size:clamp(17px,1.5vw,20px);color:rgba(255,255,255,.88)}
+.glass{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:12px;margin-top:22px;padding:8px 8px 8px 20px;border-radius:99px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.24);-webkit-backdrop-filter:blur(22px) saturate(1.5);backdrop-filter:blur(22px) saturate(1.5)}
+.glass small{display:block;font-size:12px;color:var(--dim);line-height:1.2}
+.glass b{display:block;font-family:var(--display);font-weight:600;font-size:17px;white-space:nowrap}
+.glass .btn{padding:15px 14px 15px 20px;white-space:nowrap}
+
+/* ---------- з чим приходять: текст скролиться, відео тримається і змінюється ---------- */
+.st{margin-top:36px}
+.st-media{position:sticky;top:12px;z-index:3;height:34svh;min-height:230px;border-radius:24px;overflow:hidden;background:var(--navy);box-shadow:0 18px 50px rgba(8,20,80,.28)}
+.st-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;opacity:0;transform:scale(1.06);transition:opacity .7s ease,transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.st-media video.on{opacity:1;transform:none}
+.st-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(6,16,64,.7) 100%)}
+.st-count{position:absolute;left:16px;bottom:14px;z-index:2;font-family:var(--display);font-weight:600;font-size:14px;color:var(--white)}
+.st-bar{position:absolute;left:0;right:0;bottom:0;height:4px;z-index:2;background:rgba(255,255,255,.25)}
+.st-bar i{display:block;height:100%;width:20%;background:var(--blue-hi);transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.st-list li{padding:34px 0;border-bottom:1.5px solid rgba(0,0,0,.12);transition:opacity .45s ease}
+.st-list li:last-child{border-bottom:0;padding-bottom:0}
+.js .st-list li{opacity:.22}
+.js .st-list li.on{opacity:1}
+.st-list .n{font-family:var(--display);font-weight:600;font-size:15px;color:var(--blue)}
+.st-list h3{margin-top:12px;font-weight:600;font-size:clamp(23px,6.2vw,36px);line-height:1.12}
+.st-list p{position:relative;margin-top:16px;padding-left:18px;font-size:17px;line-height:1.5;color:var(--ink-dim);max-width:30em}
+.st-list p::before{content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:3px;border-radius:3px;background:var(--blue);transform-origin:50% 0;transform:scaleY(0);transition:transform .6s cubic-bezier(.2,.8,.2,1) .15s}
+.st-list li.on p::before,html:not(.js) .st-list p::before{transform:none}
+
+/* ---------- що буде ---------- */
+.what{display:grid;gap:14px;margin-top:36px}
+.what .vc{aspect-ratio:4/5}
+.what .n{font-family:var(--display);font-weight:800;font-size:56px;line-height:.9;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.8)}
+.what h3{margin-top:14px;font-weight:600;font-size:clamp(24px,2.5vw,32px)}
+.what p{margin-top:10px;color:rgba(255,255,255,.88);font-size:16.5px}
+.tag{display:inline-block;margin-top:14px;padding:7px 13px;border-radius:99px;background:var(--blue);font-weight:600;font-size:13.5px}
+
+/* ---------- хто виступає ---------- */
+.spk{display:grid;gap:36px;margin-top:36px}
+.spk figure{margin:0}
+.spk .pl{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;background:var(--navy)}
+.spk video{width:100%;height:100%;object-fit:cover}
+.spk .play{position:absolute;inset:0;display:grid;place-items:center;border:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.55) 100%);cursor:pointer}
+.spk .play i{display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 12px rgba(20,71,255,.25);transition:transform .25s}
+.spk .play i::before{content:"";margin-left:5px;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #fff}
+.spk .play span{position:absolute;left:18px;bottom:16px;font-weight:600;font-size:14.5px;color:#fff}
+.spk .pl.playing .play{display:none}
+.spk h3{margin-top:18px;font-weight:600;font-size:clamp(24px,2.6vw,34px)}
+.spk .role{margin-top:8px;font-weight:600;color:var(--blue)}
+.spk p{margin-top:10px;color:var(--ink-dim);max-width:30em}
+
+/* ---------- як проходять три години ---------- */
+.flow{position:relative;display:grid;gap:30px;margin-top:40px}
+.flow::before{content:"";position:absolute;left:47px;top:20px;bottom:20px;width:2px;background:rgba(0,0,0,.12)}
+.flow li{position:relative;display:grid;grid-template-columns:96px minmax(0,1fr);gap:18px;align-items:center}
+.flow figure{position:relative;width:96px;height:96px;border-radius:50%;overflow:hidden;background:var(--navy);border:4px solid var(--soft);box-shadow:0 0 0 2px var(--blue)}
+.flow video{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.flow b{display:block;font-family:var(--display);font-weight:600;font-size:18.5px;line-height:1.2}
+.flow span{display:block;margin-top:6px;color:var(--ink-dim);font-size:16.5px;line-height:1.45}
+
+/* ---------- для кого ---------- */
+.who{display:grid;gap:14px;margin-top:36px}
+.who .vc{aspect-ratio:5/4}
+.who h3{font-weight:600;font-size:23px;line-height:1.15}
+.who p{margin-top:8px;color:rgba(255,255,255,.88);font-size:16px}
+
+/* ---------- як це виглядає ---------- */
+.strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:36px calc(var(--gut-r) * -1) 0 calc(var(--gut) * -1);padding-inline:var(--gut) var(--gut-r);scroll-padding-inline:var(--gut)}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 58%;scroll-snap-align:start;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:var(--navy);margin:0}
+.strip video{width:100%;height:100%;object-fit:cover}
+
+/* ---------- бронювання ---------- */
+.book{background:var(--blue)}
+.book .date{font-size:clamp(110px,31vw,300px);text-shadow:none;white-space:nowrap}
+.book h2{margin-top:26px;font-weight:600;font-size:clamp(26px,3.6vw,46px);max-width:14em}
+.book .t{margin-top:14px;max-width:30em;color:rgba(255,255,255,.94)}
+.book dl{margin-top:26px;border-top:1.5px solid rgba(255,255,255,.5)}
+.book dl div{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1.5px solid rgba(255,255,255,.5)}
+.book dt{color:rgba(255,255,255,.9)}
+.book dd{font-family:var(--display);font-weight:600;text-align:right}
+.book .note{margin-top:14px;font-size:15px;color:rgba(255,255,255,.92)}
+.book .btn{margin-top:22px;width:100%;padding-block:20px;font-size:17px}
+
+footer{padding:28px 0 110px;background:var(--blue);color:rgba(255,255,255,.85);font-size:14.5px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);background:linear-gradient(to top,rgba(0,0,0,.92) 60%,rgba(0,0,0,0));transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.bar.on{transform:none}
+.bar .btn{width:100%;padding-block:15px}
+
+/* ---------- вікно бронювання ---------- */
+.qz{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center;background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);opacity:0;transition:opacity .3s}
+.qz[hidden]{display:none}
+.qz.open{opacity:1}
+.qz-p{position:relative;width:100%;max-width:520px;background:var(--white);color:var(--black);color-scheme:light;border-radius:28px 28px 0 0;padding:26px var(--gut-r) calc(24px + env(safe-area-inset-bottom,0px)) var(--gut);transform:translateY(40px);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.qz.open .qz-p{transform:none}
+.qz-x{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:0;background:var(--soft);font-size:22px;line-height:1;cursor:pointer;color:var(--black)}
+.qz h3{font-weight:600;font-size:23px;line-height:1.15;padding-right:44px}
+.qz .hint{margin-top:8px;color:var(--ink-dim);font-size:15.5px}
+.cnt{display:grid;grid-template-columns:64px minmax(0,1fr) 64px;align-items:center;gap:10px;margin-top:22px;padding:8px;border-radius:99px;background:var(--soft)}
+.cnt button{width:64px;height:64px;border-radius:50%;border:0;background:var(--white);font-size:28px;line-height:1;cursor:pointer;color:var(--black);box-shadow:0 2px 10px rgba(0,0,0,.08);transition:background .2s,color .2s}
+.cnt button:disabled{opacity:.35;cursor:default}
+.cnt output{text-align:center;font-family:var(--display);font-weight:800;font-size:40px;line-height:1}
+.cnt output small{display:block;margin-top:4px;font-family:var(--body);font-weight:500;font-size:14px;color:var(--ink-dim)}
+.sum{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:20px;padding-top:18px;border-top:1.5px solid rgba(0,0,0,.12)}
+.sum span{color:var(--ink-dim)}
+.sum b{font-family:var(--display);font-weight:600;font-size:24px;white-space:nowrap}
+.qz .btn{width:100%;margin-top:20px;padding-block:19px;font-size:17px}
+.qz .pay{margin-top:12px;text-align:center;font-size:14px;color:var(--ink-dim)}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in,html:not(.js) .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.js .st-list li{opacity:1}}
+
+@media(min-width:700px){
+  .what,.who{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .who .vc{aspect-ratio:4/5}
+  .spk{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+  .strip figure{flex-basis:30%}
+}
+@media(min-width:900px){
+  .sec + .sec,.hero + .sec{border-radius:56px 56px 0 0;margin-top:-56px}
+  .hero{justify-content:center;padding-bottom:56px}
+  .hv{left:auto;right:0;width:58%;height:100%}
+  .hv video{object-position:50% 50%}
+  .hv::after{background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.55) 26%,rgba(0,0,0,0) 60%),linear-gradient(0deg,#000 0%,rgba(6,18,76,.4) 22%,rgba(0,0,0,0) 50%)}
+  .hero-in{padding-block:110px 60px;width:100%}
+  .date{font-size:clamp(120px,14vw,200px)}
+  .hero h1{font-size:clamp(40px,4.6vw,66px);max-width:9.5em}
+  .hero .lead{max-width:25em}
+  .glass{display:inline-grid;padding-left:26px;gap:22px}
+  .glass .btn{padding:17px 26px 17px 30px}
+  .st{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:72px;align-items:start;margin-top:64px}
+  .st-media{top:100px;height:auto;aspect-ratio:4/5}
+  .st-list li{padding:56px 0}
+  .st-list li:first-child{padding-top:0}
+  .what{margin-top:56px;gap:18px}
+  .what .vc{aspect-ratio:3/4}
+  .spk{margin-top:56px;column-gap:40px}
+  .flow-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:72px;align-items:start}
+  .flow{margin-top:0}
+  .flow-wrap .mega{font-size:clamp(40px,5.6vw,78px)}
+  .flow::before{left:59px}
+  .flow li{grid-template-columns:120px minmax(0,1fr);gap:26px}
+  .flow figure{width:120px;height:120px}
+  .who{margin-top:56px;gap:18px}
+  .strip{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;overflow:visible;margin:56px 0 0;padding:0}
+  .book .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);column-gap:72px;align-items:end;margin-top:20px}
+  .book dl{margin-top:0}
+  .bar{display:none}
+  footer{padding-bottom:40px}
+  .qz{align-items:center}
+  .qz-p{border-radius:28px;padding:34px 36px 32px}
+}
+@media(hover:hover){.btn-blue:hover{background:#0d37d6}.btn-white:hover{background:var(--black);color:var(--white)}.spk .play:hover i{transform:scale(1.08)}.cnt button:not(:disabled):hover{background:var(--black);color:var(--white)}}
+
+/* ================= v3: мобільна версія з нуля ================= */
+.hero{padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
+.hv{height:100%}
+.hv video{object-position:50% 0}
+.hv::after{background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,0) 14%,rgba(0,0,0,0) 36%,rgba(0,0,0,.72) 56%,#000 76%)}
+.hero-in{padding-bottom:0;width:100%;min-width:0}
+.fit{display:block;white-space:nowrap;width:max-content;max-width:none}
+.hero .date{font-size:31vw;line-height:.82;margin-left:0;text-shadow:0 8px 50px rgba(0,0,0,.55)}
+.hero h1{margin-top:14px;font-size:8vw;line-height:.98}
+.hero h1 span + span{color:var(--blue-hi)}
+.hero .lead{margin-top:14px;font-size:16.5px;line-height:1.45}
+.glass{margin-top:18px}
+.pains{display:grid;gap:12px;margin-top:32px}
+.pn{position:relative;overflow:hidden;padding:26px 22px 24px;border-radius:26px;background:var(--soft)}
+.pn-bar{position:absolute;left:0;top:0;height:5px;width:100%;background:var(--blue);transform-origin:0 50%;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.8,.2,1) .25s}
+.pn.in .pn-bar,html:not(.js) .pn-bar{transform:none}
+.pn .n{font-family:var(--display);font-weight:800;font-size:44px;line-height:.9;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1.5px var(--blue)}
+.pn h3{margin-top:16px;font-weight:600;font-size:clamp(21px,5.6vw,30px);line-height:1.14}
+.pn p{margin-top:18px;padding-top:16px;border-top:1.5px solid rgba(0,0,0,.12);font-size:16.5px;line-height:1.5;color:var(--ink-dim)}
+.pn p b{display:block;margin-bottom:6px;font-weight:600;font-size:13.5px;letter-spacing:.02em;color:var(--blue)}
+.flow2{position:relative;display:grid;gap:14px;margin-top:36px;padding-left:0}
+.fl-fill{display:none}
+.flow2 li{position:relative;padding:22px 22px 22px 76px;border-radius:22px;background:var(--white)}
+.flow2 .k{position:absolute;left:20px;top:20px;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--blue);color:var(--white);font-family:var(--display);font-weight:600;font-size:15px}
+.flow2 b{display:block;font-family:var(--display);font-weight:600;font-size:18px;line-height:1.2}
+.flow2 p{margin-top:8px;color:var(--ink-dim);font-size:16.5px;line-height:1.45}
+.book .date{font-size:31vw;line-height:.82;margin-left:0}
+@media(min-width:900px){
+  .hv{height:100%}
+  .hv video{object-position:50% 50%}
+  .hero .date{font-size:clamp(120px,14vw,200px)}
+  .hero h1{font-size:clamp(38px,4.3vw,62px)}
+  .hero .lead{font-size:19px;max-width:25em}
+  .pains{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:56px}
+  .pn{padding:36px 34px}
+  .pn:last-child{grid-column:1/-1}
+  .flow2{margin-top:0}
+  .book .date{font-size:clamp(160px,22vw,300px)}
+}
+
+/* ================= v4 ================= */
+.hv video{object-position:50% 12%;filter:brightness(.78) saturate(.95)}
+.hv::after{background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.08) 18%,rgba(0,0,0,.1) 40%,rgba(0,0,0,.78) 60%,#000 80%)}
+.ol{display:grid;gap:24px;margin-top:36px}
+.ol-ph{margin:0;border-radius:26px;overflow:hidden;aspect-ratio:4/5;background:var(--navy)}
+.ol-ph img{width:100%;height:100%;object-fit:cover;object-position:60% 20%}
+.ol-tx h3{font-weight:600;font-size:clamp(28px,3.4vw,44px)}
+.ol-tx .role{margin-top:10px;font-weight:600;color:var(--blue)}
+.ol-tx p{margin-top:12px;color:var(--ink-dim);max-width:30em}
+.ol-biz{display:grid;gap:10px;margin-top:22px}
+.ol-biz a{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 16px 12px 12px;border-radius:20px;background:var(--soft);transition:background .2s}
+.ol-biz img{width:48px;height:48px;border-radius:12px;object-fit:cover;object-position:50% 12%;background:#fff}
+.ol-biz b{display:block;font-family:var(--display);font-weight:600;font-size:16px}
+.ol-biz small{display:block;margin-top:2px;font-size:14px;color:var(--ink-dim)}
+.ol-biz i{font-style:normal;color:var(--blue);font-size:15px}
+.ol-h{margin-top:56px;font-weight:600;font-size:clamp(24px,2.8vw,36px);line-height:1.12}
+.ol-sub{margin-top:12px;color:var(--ink-dim);max-width:32em}
+.sp-strip{margin-top:24px}
+@media(hover:hover){.ol-biz a:hover{background:#e4e8f2}}
+@media(min-width:900px){
+  .hv video{object-position:50% 50%}
+  .ol{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:center;margin-top:56px}
+  .ol-h{margin-top:96px}
+  .sp-strip{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <div class="hv"><video id="hv" muted loop playsinline autoplay preload="auto" poster="img/ev-hero.jpg" src="img/ev-v-hero.mp4" aria-label="Учасники минулого семінару разом"></video></div>
+  <div class="hero-in wrap">
+    <div class="date fit" aria-hidden="true">29.11</div>
+    <h1><span class="fit">Офлайн</span><span class="fit">бізнес-семінар</span></h1>
+    <p class="lead">У Празі діючі підприємці показують, що зараз працює в їхніх компаніях, розбирають питання про ваш бізнес і знайомлять вас з іншими власниками.</p>
+    <div class="glass"><div><small>Прага</small><b>1000 Kč</b></div><button class="btn btn-blue" type="button" data-book>Забронювати місце <span class="arr">↗</span></button></div>
+  </div>
+</header>
+
+<main>
+<section class="sec light">
+  <div class="wrap">
+    <h2 class="mega rv">З чим сюди <em>приходять</em></h2>
+    <ol class="pains">
+        <li class="pn rv"><i class="pn-bar"></i><span class="n">01</span><h3>Хочу відкрити свою справу в Чехії, але не знаю, з чого почати</h3><p><b>На семінарі</b>У залі сидять люди, які вже її відкрили, і в них можна прямо спитати, як вони починали і скільки це коштувало.</p></li>
+        <li class="pn rv"><i class="pn-bar"></i><span class="n">02</span><h3>Конкуренти пробують нове, а я не розумію, що з цього справді працює</h3><p><b>На семінарі</b>Спікери показують, що впровадили у власних компаніях і що з цього принесло гроші, а що виявилось марною витратою.</p></li>
+        <li class="pn rv"><i class="pn-bar"></i><span class="n">03</span><h3>Усі рішення приймаю сам, і порадитись про них немає з ким</h3><p><b>На семінарі</b>Можна підняти руку, розповісти про свою ситуацію і розібрати її разом зі спікером і залом.</p></li>
+        <li class="pn rv"><i class="pn-bar"></i><span class="n">04</span><h3>Боюсь вкласти гроші і зробити помилку, якої можна було уникнути</h3><p><b>На семінарі</b>Підприємці чесно розповідають про помилки, які обійшлися їм дорого, щоб ви не платили за них удруге.</p></li>
+        <li class="pn rv"><i class="pn-bar"></i><span class="n">05</span><h3>Мені бракує знайомств серед підприємців у Празі</h3><p><b>На семінарі</b>Після виступів увесь зал знайомиться між собою, і саме за цим сюди приходить більшість учасників.</p></li>
+      </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2 class="mega rv">Що буде <em>на семінарі</em></h2>
+    <div class="what">
+      <article class="vc rv"><video data-loop muted loop playsinline preload="none" poster="img/ev-sp2.jpg" src="img/c-sp2.mp4" aria-label="Спікер виступає перед учасниками"></video><div class="vc-in"><span class="n">01</span><h3>Виступи діючих підприємців</h3><p>Реальні кейси з їхніх компаній: які рішення дали результат, які помилки обійшлися дорого і що вони змінюють у бізнесі вже сьогодні.</p></div></article>
+      <article class="vc rv"><video data-loop muted loop playsinline preload="none" poster="img/ev-x2.jpg" src="img/c-ask.mp4" aria-label="Учасник ставить питання спікеру"></video><div class="vc-in"><span class="n">02</span><h3>Питання про ваш бізнес</h3><p>Ви розповідаєте про свою ситуацію і чуєте, що на вашому місці зробили б люди, які вже проходили через схоже.</p></div></article>
+      <article class="vc rv"><video data-loop muted loop playsinline preload="none" poster="img/ev-net2.jpg" src="img/c-net2.mp4" aria-label="Учасники знайомляться після виступів"></video><div class="vc-in"><span class="n">03</span><h3>Нетворкінг</h3><p>Знайомитесь з іншими учасниками, дивитесь, хто чим займається, обмінюєтесь контактами і знаходите партнерів та клієнтів.</p><span class="tag">Головна частина семінару</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="wrap">
+    <h2 class="mega rv">Хто <em>виступає</em></h2>
+    <div class="ol">
+      <figure class="ol-ph rv"><img src="img/speaker.jpg" alt="Олег Гладун виступає перед залом" loading="lazy" width="762" height="1001"></figure>
+      <div class="ol-tx rv">
+        <h3>Олег Гладун</h3>
+        <p class="role">Підприємець із Праги, будує компанії з 2017 року</p>
+        <p>На семінарі розбирає власні бізнеси на цифрах: як влаштовані продажі, маркетинг і команда в компаніях, якими він керує сьогодні.</p>
+        <ul class="ol-biz">
+          <li><a href="https://www.instagram.com/aurum_agency_spol/" target="_blank" rel="noopener"><img src="img/aurum-logo.jpg" alt="" width="48" height="48"><span><b>Aurum Agency</b><small>Агенція праці в Чехії, 450+ працівників</small></span><i>↗</i></a></li>
+          <li><a href="https://www.instagram.com/center.praha/" target="_blank" rel="noopener"><img src="img/center-logo.png" alt="" width="48" height="48"><span><b>CENTER</b><small>Мережа залів єдиноборств у Празі та Кракові</small></span><i>↗</i></a></li>
+          <li><a href="https://www.instagram.com/oleh.hladun/" target="_blank" rel="noopener"><img src="img/stand.jpg" alt="" width="48" height="48"><span><b>@oleh.hladun</b><small>Instagram Олега</small></span><i>↗</i></a></li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="ol-h rv">Діючі підприємці з різних сфер</h3>
+    <p class="ol-sub rv">Власники бізнесів, які працюють у Чехії просто зараз і показують, що відбувається в їхніх компаніях зсередини.</p>
+    <div class="strip sp-strip">
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/p-sp.jpg" src="img/c-sp1.mp4" aria-label="Запрошений спікер виступає"></video></figure>
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/p-talk2.jpg" src="img/c-talk2.mp4" aria-label="Спікери перед залом"></video></figure>
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/ev-sp2.jpg" src="img/c-sp2.mp4" aria-label="Запрошений спікер"></video></figure>
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/p-talk3.jpg" src="img/c-talk3.mp4" aria-label="Виступ на семінарі"></video></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap flow-wrap">
+    <div><h2 class="mega rv">Три <em>години</em></h2><p class="sub rv">Формат камерний, тому до спікерів можна підійти особисто, а з кожним у залі встигнути поговорити.</p></div>
+    <ol class="flow2" id="flow2"><i class="fl-fill" aria-hidden="true"></i>
+      <li class="rv"><span class="k">1</span><b>Збираємось і знайомимось</b><p>Учасники займають місця і знайомляться із сусідами ще до початку.</p></li>
+      <li class="rv"><span class="k">2</span><b>Виступи спікерів</b><p>Кожен розбирає свою тему на прикладі власної компанії.</p></li>
+      <li class="rv"><span class="k">3</span><b>Питання із залу</b><p>Можна розібрати власну проблему разом зі спікером.</p></li>
+      <li class="rv"><span class="k">4</span><b>Нетворкінг</b><p>Вільне спілкування, заради якого сюди приходить більшість учасників.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2 class="mega rv">Для <em>кого</em></h2>
+    <div class="who">
+      <article class="vc rv"><video data-loop muted loop playsinline preload="none" poster="img/ev-aud4.jpg" src="img/c-aud5.mp4"></video><div class="vc-in"><h3>Хочете почати</h3><p>Плануєте власну справу в Чехії і хочете розпитати тих, хто її вже відкрив, про старт, перші гроші та помилки.</p></div></article>
+      <article class="vc rv"><video data-loop muted loop playsinline preload="none" poster="img/ev-aud2.jpg" src="img/c-aud2.mp4"></video><div class="vc-in"><h3>Вже маєте бізнес</h3><p>Хочете вивести компанію на новий рівень і отримати свіжий погляд на свої задачі від інших власників.</p></div></article>
+      <article class="vc rv"><video data-loop muted loop playsinline preload="none" poster="img/ev-net5.jpg" src="img/c-net4.mp4"></video><div class="vc-in"><h3>Шукаєте своє оточення</h3><p>Вам бракує людей, з якими можна чесно говорити про бізнес, і ви хочете знайти їх у Празі.</p></div></article>
+    </div>
+    <h2 class="mega rv" style="margin-top:clamp(84px,11vw,150px)">Як це <em>виглядає</em></h2>
+    <div class="strip">
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/ev-hero.jpg" src="img/ev-v-hero.mp4" aria-label="Учасники семінару разом"></video></figure>
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/p-oleh.jpg" src="img/c-oleh.mp4" aria-label="Олег Гладун виступає"></video></figure>
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/ev-x10.jpg" src="img/c-aud1.mp4" aria-label="Зал під час виступу"></video></figure>
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/ev-x11.jpg" src="img/c-net1.mp4" aria-label="Знайомство учасників"></video></figure>
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/ev-aud6.jpg" src="img/c-aud6.mp4" aria-label="Учасники в залі"></video></figure>
+      <figure><video data-loop muted loop playsinline preload="none" poster="img/ev-net2.jpg" src="img/c-net2.mp4" aria-label="Спілкування після виступів"></video></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec book" id="book">
+  <div class="wrap">
+    <div class="date fit rv" aria-hidden="true">29.11</div>
+    <div class="grid">
+      <div class="rv"><h2>Забронюйте місце на семінар у Празі</h2><p class="t">За три години ви почуєте, як зараз працюють чужі компанії, поставите питання про свою і познайомитесь із підприємцями, які будують бізнес у Чехії.</p></div>
+      <div class="rv">
+        <dl>
+          <div><dt>Дата</dt><dd>29 листопада 2026</dd></div>
+          <div><dt>Місто</dt><dd>Прага</dd></div>
+          <div><dt>Тривалість</dt><dd>3 години</dd></div>
+          <div><dt>Участь</dt><dd>1000 Kč</dd></div>
+        </dl>
+        <p class="note">Кількість місць обмежена форматом заходу.</p>
+        <button class="btn btn-white" type="button" data-book>Забронювати місце <span class="arr">↗</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Офлайн бізнес-семінар у Празі · 29 листопада 2026</div></footer>
+
+<div class="bar" id="bar"><button class="btn btn-blue" type="button" data-book>Забронювати місце · 1000 Kč <span class="arr">↗</span></button></div>
+
+<div class="qz" id="qz" hidden role="dialog" aria-modal="true" aria-labelledby="qz-t">
+  <div class="qz-p">
+    <button type="button" class="qz-x" id="qz-x" aria-label="Закрити">×</button>
+    <h3 id="qz-t">Скільки місць бронюєте?</h3>
+    <p class="hint">Можна прийти з партнером або командою.</p>
+    <div class="cnt"><button type="button" id="qz-m" aria-label="Менше">−</button><output id="qz-n" aria-live="polite">1<small>місце</small></output><button type="button" id="qz-pl" aria-label="Більше">+</button></div>
+    <div class="sum"><span>До оплати</span><b id="qz-s">1000 Kč</b></div>
+    <button type="button" class="btn btn-blue" id="qz-go">Перейти до оплати <span class="arr">↗</span></button>
+    <p class="pay" id="qz-pay">Оплата карткою на захищеній сторінці Stripe.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* Посилання на оплату Stripe. Якщо є окреме посилання під кожну кількість місць, впишіть їх за номерами, інакше достатньо default. */
+  var STRIPE={'default':''};
+  var PRICE=1000,MAX=10;
+  var d=document.documentElement;d.classList.add('js');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* поява блоків */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    [].forEach.call(document.querySelectorAll('.rv'),function(el){io.observe(el);});
+    if(!reduce){
+      var vo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}});},{threshold:.3});
+      [].forEach.call(document.querySelectorAll('video[data-loop]'),function(v){v.muted=true;vo.observe(v);});
+    }
+  }else{[].forEach.call(document.querySelectorAll('.rv'),function(el){el.classList.add('in');});}
+
+  /* «з чим приходять»: активний пункт по центру екрана перемикає відео */
+  var st=document.getElementById('st');
+  if(st){
+    var items=[].slice.call(st.querySelectorAll('.st-list li')),vids=[].slice.call(st.querySelectorAll('.st-media video')),cnt=document.getElementById('st-count'),bar=document.getElementById('st-bar'),cur=-1,seen=false,seenPrev=false;
+    function set(n){
+      if(n===cur)return;cur=n;
+      items.forEach(function(li,i){li.classList.toggle('on',i===n);});
+      vids.forEach(function(v,i){var on=i===n;v.classList.toggle('on',on);if(on&&seen&&!reduce){v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}});
+      cnt.textContent='0'+(n+1)+' / 0'+items.length;bar.style.width=((n+1)/items.length*100)+'%';
+    }
+    function pick(){
+      var mid=innerHeight*(innerWidth>=900?.5:.62),best=0,bd=1e9;
+      items.forEach(function(li,i){var r=li.getBoundingClientRect(),c=r.top+r.height/2,dd=Math.abs(c-mid);if(dd<bd){bd=dd;best=i;}});
+      var r=st.getBoundingClientRect();seen=r.top<innerHeight&&r.bottom>0;
+      if(best!==cur||seen!==seenPrev){cur=-1;set(best);seenPrev=seen;}
+    }
+    var tick=false;addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;pick();});},{passive:true});
+    addEventListener('resize',pick);pick();
+  }
+
+  /* відео спікерів зі звуком */
+  var pls=[].slice.call(document.querySelectorAll('.spk .pl'));
+  pls.forEach(function(pl){
+    var v=pl.querySelector('video'),b=pl.querySelector('.play');
+    b.addEventListener('click',function(){pls.forEach(function(o){if(o!==pl){var ov=o.querySelector('video');ov.pause();}});v.controls=true;pl.classList.add('playing');var p=v.play();if(p&&p.catch)p.catch(function(){});});
+    v.addEventListener('ended',function(){pl.classList.remove('playing');v.controls=false;v.currentTime=0;});
+  });
+
+
+  /* великі рядки першого екрана займають рівно ширину колонки */
+  function fitAll(){
+    if(innerWidth>=900){[].forEach.call(document.querySelectorAll('.fit'),function(el){el.style.fontSize='';});return;}
+    [].forEach.call(document.querySelectorAll('.fit'),function(el){
+      var box=el.parentNode.closest('.wrap')||el.parentNode,cs=getComputedStyle(box),w=box.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+      el.style.fontSize='100px';var k=w/el.getBoundingClientRect().width;el.style.fontSize=(100*k).toFixed(2)+'px';
+    });
+  }
+  fitAll();addEventListener('resize',fitAll);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitAll);
+  var hv=document.getElementById('hv');
+  function kick(){if(hv&&hv.paused){hv.muted=true;var p=hv.play();if(p&&p.catch)p.catch(function(){});}}
+  kick();addEventListener('touchstart',kick,{passive:true,once:true});addEventListener('scroll',kick,{passive:true,once:true});
+
+  /* нижня кнопка */
+  var bbar=document.getElementById('bar'),hero=document.querySelector('.hero'),book=document.getElementById('book');
+  function upd(){var h=hero.getBoundingClientRect().bottom<60,b=book.getBoundingClientRect();bbar.classList.toggle('on',h&&!(b.top<innerHeight*.9&&b.bottom>0));}
+  addEventListener('scroll',upd,{passive:true});upd();
+
+  /* бронювання: кількість місць, далі оплата */
+  var qz=document.getElementById('qz'),n=1,out=document.getElementById('qz-n'),sum=document.getElementById('qz-s'),bm=document.getElementById('qz-m'),bp=document.getElementById('qz-pl'),go=document.getElementById('qz-go'),pay=document.getElementById('qz-pay');
+  function word(k){var a=k%10,b=k%100;if(a===1&&b!==11)return 'місце';if(a>=2&&a<=4&&(b<12||b>14))return 'місця';return 'місць';}
+  function fmt(x){return String(x).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+  function link(){return STRIPE[n]||STRIPE['default']||'';}
+  function draw(){
+    out.firstChild.nodeValue=n;out.querySelector('small').textContent=word(n);
+    sum.textContent=fmt(n*PRICE)+' Kč';bm.disabled=n<=1;bp.disabled=n>=MAX;
+    if(!link()){pay.textContent='Посилання на оплату ще не підключене.';}
+    else{pay.textContent=STRIPE[n]?'Оплата карткою на захищеній сторінці Stripe.':'На сторінці оплати Stripe вкажіть ту саму кількість місць.';}
+  }
+  function openQ(){qz.hidden=false;d.style.overflow='hidden';void qz.offsetWidth;qz.classList.add('open');draw();}
+  function closeQ(){qz.classList.remove('open');d.style.overflow='';setTimeout(function(){qz.hidden=true;},300);}
+  [].forEach.call(document.querySelectorAll('[data-book]'),function(b){b.addEventListener('click',openQ);});
+  document.getElementById('qz-x').addEventListener('click',closeQ);
+  qz.addEventListener('click',function(e){if(e.target===qz)closeQ();});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&!qz.hidden)closeQ();});
+  bm.addEventListener('click',function(){if(n>1){n--;draw();}});
+  bp.addEventListener('click',function(){if(n<MAX){n++;draw();}});
+  go.addEventListener('click',function(){
+    var u=link();if(!u){pay.textContent='Посилання на оплату ще не підключене.';return;}
+    try{window.dispatchEvent(new CustomEvent('book_checkout',{detail:{seats:n,total:n*PRICE}}));}catch(e){}
+    var sep=u.indexOf('?')<0?'?':'&';window.open(u+sep+'client_reference_id=seats_'+n,'_blank','noopener');
+  });
+})();
+</script>
+
+</body>
+</html>
