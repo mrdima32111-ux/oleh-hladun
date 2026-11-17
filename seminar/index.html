@@ -287,6 +287,104 @@ footer{padding:28px 0 110px;background:var(--blue);color:rgba(255,255,255,.85);f
   .hv::after{background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 62%,rgba(0,0,0,.75) 86%,#000 100%)}
   .hero .date{text-shadow:none}
 }
+
+/* ================= v6: ПК-версія ================= */
+.dbar{display:none}
+@media(min-width:900px){
+  body{font-size:18px}
+  .wrap{padding-inline:max(40px,env(safe-area-inset-left,0px)) max(40px,env(safe-area-inset-right,0px))}
+  /* верхня панель після першого екрана */
+  .dbar{display:block;position:fixed;z-index:30;left:0;right:0;top:18px;pointer-events:none;transform:translateY(-140%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+  .dbar.on{transform:none}
+  .dbar-in{pointer-events:auto;width:max-content;margin-inline:auto;display:flex;align-items:center;gap:18px;padding:7px 7px 7px 24px;border-radius:99px;background:rgba(10,10,14,.72);border:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);color:#fff}
+  .dbar b{font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:-.02em}
+  .dbar span{font-size:15px;color:rgba(255,255,255,.8)}
+  .dbar em{font-style:normal;font-family:var(--display);font-weight:600;font-size:15px;padding-left:18px;border-left:1px solid rgba(255,255,255,.22)}
+  .dbar .btn{padding:11px 12px 11px 20px;font-size:15px;gap:10px}
+  .dbar .arr{width:24px;height:24px;font-size:13px}
+  /* перший екран: текст зліва, відео карткою справа */
+  .hero{min-height:min(100svh,960px);justify-content:center;padding-block:0}
+  .hero-in{position:relative;display:block;padding-block:110px 90px;padding-right:calc(min(40vw,520px) + 72px + 40px)}
+  .hv{left:auto;right:max(40px,calc((100vw - var(--max))/2 + 40px));top:50%;width:min(40vw,520px);height:min(78svh,760px);transform:translateY(-50%);border-radius:36px;overflow:hidden;box-shadow:0 40px 120px rgba(20,71,255,.35);z-index:0}
+  .hv video{object-position:50% 62%;filter:brightness(.92)}
+  .hv::after{background:linear-gradient(180deg,rgba(0,0,0,0) 62%,rgba(6,16,64,.55) 100%)}
+  .orb.a{width:44vw;height:44vw;left:auto;right:-6vw;bottom:auto;top:8%;opacity:.34}
+  .orb.b{width:30vw;height:30vw;left:-12vw;right:auto;bottom:-10%;opacity:.22}
+  .hero .date{font-size:clamp(130px,15vw,220px);line-height:.8}
+  .hero h1{margin-top:26px;font-size:clamp(40px,4.5vw,66px);line-height:.98;max-width:none}
+  .hero h1 .fit{display:block}
+  .hero .lead{margin-top:22px;font-size:20px;line-height:1.5;max-width:26em}
+  .glass{margin-top:32px;padding:10px 10px 10px 28px;gap:26px}
+  .glass small{font-size:13px}
+  .glass b{font-size:20px}
+  .glass .btn{padding:19px 28px 19px 32px;font-size:17px}
+  /* з чим приходять: 3 + 2 */
+  .pains{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;margin-top:64px}
+  .pn{grid-column:span 2;padding:38px 34px 34px;display:grid;grid-template-rows:auto auto 1fr;transition:transform .3s,box-shadow .3s}
+  .pn:nth-child(n+4){grid-column:span 3}
+  .pn:last-child{grid-column:span 3}
+  .pn .n{font-size:56px}
+  .pn h3{font-size:clamp(22px,1.9vw,27px);line-height:1.16;margin-top:22px}
+  .pn p{align-self:end;font-size:17px;margin-top:26px}
+  .pn p b{font-size:14px}
+  /* що буде */
+  .what{gap:20px;margin-top:64px}
+  .what .vc{aspect-ratio:3/4;border-radius:30px}
+  .what .vc-in{padding:32px 30px}
+  .what .n{font-size:72px}
+  .what h3{font-size:clamp(24px,2.1vw,30px)}
+  .what p{font-size:17px}
+  /* хто виступає */
+  .ol{margin-top:64px}
+  .ol-tx p{font-size:19px}
+  .ol-biz{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:30px}
+  .ol-biz a{grid-template-columns:48px minmax(0,1fr);padding:16px}
+  .ol-biz i{display:none}
+  .ol-sub{font-size:19px}
+  .sp-strip figure{border-radius:26px}
+  /* три години: 2 × 2 */
+  .flow-wrap{display:block}
+  .flow-wrap > div:first-child{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:72px;align-items:end}
+  .flow-wrap .mega{font-size:clamp(40px,11.4vw,120px)}
+  .flow-wrap .sub{margin:0 0 12px;font-size:20px}
+  .flow2{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:64px}
+  .flow2 li{padding:30px 28px 32px;border-radius:28px}
+  .flow2 .k{position:static;width:52px;height:52px;font-size:19px;margin-bottom:26px}
+  .flow2 b{font-size:20px}
+  .flow2 p{font-size:17px;margin-top:10px}
+  /* для кого і галерея */
+  .who{gap:20px;margin-top:64px}
+  .who .vc{aspect-ratio:3/4;border-radius:30px}
+  .who .vc-in{padding:32px 30px}
+  .who h3{font-size:28px}
+  .who p{font-size:17px;margin-top:10px}
+  .strip{gap:16px}
+  .strip figure{border-radius:24px}
+  /* бронювання */
+  .book .grid{grid-template-columns:minmax(0,6fr) minmax(0,5fr);margin-top:40px}
+  .book h2{font-size:clamp(32px,3.4vw,48px)}
+  .book .t{font-size:20px;margin-top:18px}
+  .book dl div{padding:18px 0;font-size:19px}
+  .book .btn{padding-block:22px;font-size:18px}
+  .sub{font-size:20px}
+}
+@media(min-width:900px) and (hover:hover){
+  .pn:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(10,20,60,.12)}
+  .vc > video{transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+  .vc:hover > video{transform:scale(1.04)}
+  .ol-biz a:hover{background:#e4e8f2}
+}
+@media(min-width:1500px){:root{--max:1320px}}
+
+@media(min-width:900px){
+  .hero .date{font-size:clamp(104px,11vw,170px)}
+  .hero h1{font-size:clamp(30px,3.15vw,48px)}
+  .flow-wrap > div:first-child{display:block}
+  .flow-wrap .sub{margin:22px 0 0;max-width:30em}
+  .ol-biz{grid-template-columns:minmax(0,1fr);gap:10px;max-width:520px}
+  .ol-biz a{grid-template-columns:48px minmax(0,1fr) auto;padding:12px 18px 12px 12px}
+  .ol-biz i{display:block}
+}
 </style>
 </head>
 <body>
@@ -408,6 +506,8 @@ footer{padding:28px 0 110px;background:var(--blue);color:rgba(255,255,255,.85);f
 
 <footer><div class="wrap">Офлайн бізнес-семінар у Празі · 29 листопада 2026</div></footer>
 
+<div class="dbar" id="dbar"><div class="dbar-in"><b>29.11</b><span>Офлайн бізнес-семінар у Празі</span><em>1000 Kč</em><button class="btn btn-blue" type="button" data-book>Забронювати місце <span class="arr">↗</span></button></div></div>
+
 <div class="bar" id="bar"><button class="btn btn-blue" type="button" data-book>Забронювати місце · 1000 Kč <span class="arr">↗</span></button></div>
 
 <div class="qz" id="qz" hidden role="dialog" aria-modal="true" aria-labelledby="qz-t">
@@ -484,7 +584,7 @@ footer{padding:28px 0 110px;background:var(--blue);color:rgba(255,255,255,.85);f
 
   /* нижня кнопка */
   var bbar=document.getElementById('bar'),hero=document.querySelector('.hero'),book=document.getElementById('book');
-  function upd(){var h=hero.getBoundingClientRect().bottom<60,b=book.getBoundingClientRect();bbar.classList.toggle('on',h&&!(b.top<innerHeight*.9&&b.bottom>0));}
+  function upd(){var h=hero.getBoundingClientRect().bottom<60,b=book.getBoundingClientRect();bbar.classList.toggle('on',h&&!(b.top<innerHeight*.9&&b.bottom>0));var db=document.getElementById('dbar');if(db)db.classList.toggle('on',h&&!(b.top<innerHeight*.6&&b.bottom>0));}
   addEventListener('scroll',upd,{passive:true});upd();
 
   /* бронювання: кількість місць, далі оплата */
